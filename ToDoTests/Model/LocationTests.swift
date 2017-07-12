@@ -29,4 +29,31 @@ class LocationTests: XCTestCase {
         XCTAssertEqual(location.name, "Foo")
     }
     
+    func test_EqualLocations_AreEqual() {
+        let first = Location(name: "Foo")
+        let second = Location(name: "Foo")
+        
+        XCTAssertEqual(first, second)
+    }
+    
+    func test_Locations_WhenLatitudeDiffers_AreNotEqual() {
+        let firstCoordinate = CLLocationCoordinate2D(latitude: 1, longitude: 0)
+        let first = Location(name: "Foo", coordinate: firstCoordinate)
+        
+        let secondCoordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+        let second = Location(name: "Foo", coordinate: secondCoordinate)
+        
+        XCTAssertNotEqual(first, second)
+    }
+    
+    func test_Locations_WhenLongitudeDiffers_AreNotEqual() {
+        let firstCoordinate = CLLocationCoordinate2D(latitude: 0, longitude: 1)
+        let first = Location(name: "Foo", coordinate: firstCoordinate)
+        
+        let secondCoordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+        let second = Location(name: "Foo", coordinate: secondCoordinate)
+        
+        XCTAssertNotEqual(first, second)
+    }
+    
 }
