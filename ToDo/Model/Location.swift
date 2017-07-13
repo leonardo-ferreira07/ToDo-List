@@ -28,6 +28,8 @@ extension Location {
             return false
         } else if lhs.coordinate?.longitude != rhs.coordinate?.longitude {
             return false
+        } else if lhs.name != rhs.name {
+            return false
         }
         return true
     }

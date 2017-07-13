@@ -32,7 +32,13 @@ struct ToDoItem: Equatable {
 extension ToDoItem {
     
     static func ==(lhs: ToDoItem, rhs: ToDoItem) -> Bool {
-        if lhs.location?.name != rhs.location?.name {
+        if lhs.location != rhs.location {
+            return false
+        } else if lhs.timestamp != rhs.timestamp {
+            return false
+        } else if lhs.itemDescription != rhs.itemDescription {
+            return false
+        } else if lhs.title != rhs.title {
             return false
         }
         return true
