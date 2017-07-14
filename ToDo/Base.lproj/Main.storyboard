@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item List View Controller-->
         <scene sceneID="vx3-Ex-oZD">
             <objects>
-                <viewController id="KKe-RB-4W4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ItemListViewController" id="KKe-RB-4W4" customClass="ItemListViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="auf-LF-bQv"/>
                         <viewControllerLayoutGuide type="bottom" id="AzQ-Ye-rxQ"/>
@@ -33,8 +33,13 @@
                             <constraint firstItem="sqm-f2-bNi" firstAttribute="leading" secondItem="Bl8-Ov-pAx" secondAttribute="leading" id="u6m-fM-YxL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dataProvider" destination="Vbe-TC-pAQ" id="DYu-Q7-BVU"/>
+                        <outlet property="tableView" destination="sqm-f2-bNi" id="0lz-Ko-98h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVa-SN-hwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Vbe-TC-pAQ" customClass="ItemListDataProvider" customModule="ToDo" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-188" y="147"/>
         </scene>
