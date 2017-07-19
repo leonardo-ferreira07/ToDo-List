@@ -15,6 +15,7 @@
 		A75582151F1320AD004B2DBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75582131F1320AD004B2DBB /* LaunchScreen.storyboard */; };
 		A755822B1F13252A004B2DBB /* ToDoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A755822A1F13252A004B2DBB /* ToDoItemTests.swift */; };
 		A755822F1F13268A004B2DBB /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A755822E1F13268A004B2DBB /* ToDoItem.swift */; };
+		A7912BF81F1EFC870084EC53 /* ItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7912BF71F1EFC870084EC53 /* ItemCellTests.swift */; };
 		A7B127DA1F1721AB00148BCF /* ItemListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B127D91F1721AB00148BCF /* ItemListViewControllerTest.swift */; };
 		A7B127DD1F1722AA00148BCF /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B127DC1F1722AA00148BCF /* ItemListViewController.swift */; };
 		A7BDB3801F1481D40048F0E6 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BDB37F1F1481D40048F0E6 /* Location.swift */; };
@@ -47,6 +48,7 @@
 		A75582211F1320AD004B2DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A755822A1F13252A004B2DBB /* ToDoItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemTests.swift; sourceTree = "<group>"; };
 		A755822E1F13268A004B2DBB /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		A7912BF71F1EFC870084EC53 /* ItemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellTests.swift; sourceTree = "<group>"; };
 		A7B127D91F1721AB00148BCF /* ItemListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewControllerTest.swift; sourceTree = "<group>"; };
 		A7B127DC1F1722AA00148BCF /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		A7BDB37F1F1481D40048F0E6 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				A7B127D91F1721AB00148BCF /* ItemListViewControllerTest.swift */,
 				A7430A701F18695800BAD9AA /* ItemListDataProviderTest.swift */,
+				A7912BF71F1EFC870084EC53 /* ItemCellTests.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7912BF81F1EFC870084EC53 /* ItemCellTests.swift in Sources */,
 				A7430A711F18695800BAD9AA /* ItemListDataProviderTest.swift in Sources */,
 				A7BDB3841F1487650048F0E6 /* ItemManagerTests.swift in Sources */,
 				A7BDB3821F14836B0048F0E6 /* LocationTests.swift in Sources */,

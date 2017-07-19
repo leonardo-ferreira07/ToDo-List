@@ -30,7 +30,41 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="50o-cq-ZIH" id="k3t-3D-bYP">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tV7-51-CyM">
+                                                    <rect key="frame" x="10" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgm-Pt-YZ6">
+                                                    <rect key="frame" x="77" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Die-85-w61">
+                                                    <rect key="frame" x="144" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Bgm-Pt-YZ6" firstAttribute="centerY" secondItem="k3t-3D-bYP" secondAttribute="centerY" id="44s-Ow-2kU"/>
+                                                <constraint firstItem="Die-85-w61" firstAttribute="centerY" secondItem="k3t-3D-bYP" secondAttribute="centerY" id="d0H-ZC-W3r"/>
+                                                <constraint firstItem="Die-85-w61" firstAttribute="leading" secondItem="Bgm-Pt-YZ6" secondAttribute="trailing" constant="25" id="j3B-Lq-dv3"/>
+                                                <constraint firstItem="tV7-51-CyM" firstAttribute="leading" secondItem="k3t-3D-bYP" secondAttribute="leading" constant="10" id="lPr-nq-uTF"/>
+                                                <constraint firstAttribute="trailing" secondItem="Die-85-w61" secondAttribute="trailing" constant="189" id="qwY-xw-dv5"/>
+                                                <constraint firstItem="tV7-51-CyM" firstAttribute="centerY" secondItem="k3t-3D-bYP" secondAttribute="centerY" id="soh-Na-ndt"/>
+                                                <constraint firstItem="Bgm-Pt-YZ6" firstAttribute="leading" secondItem="tV7-51-CyM" secondAttribute="trailing" constant="25" id="yW6-yf-8dZ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="Die-85-w61" id="jb1-uv-snD"/>
+                                            <outlet property="locationLabel" destination="Bgm-Pt-YZ6" id="H51-hI-6iL"/>
+                                            <outlet property="titleLabel" destination="tV7-51-CyM" id="QQ6-07-Nbx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
