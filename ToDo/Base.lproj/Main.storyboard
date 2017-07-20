@@ -87,5 +87,79 @@
             </objects>
             <point key="canvasLocation" x="-188" y="147"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="LvV-h5-lVi">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="w6T-0D-8fx" customClass="DetailViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LXF-Ce-jHb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nce-uo-1uh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="9wA-zV-H3m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CT2-JR-HqA">
+                                <rect key="frame" x="20" y="100" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N68-Os-bC6">
+                                <rect key="frame" x="20" y="151" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyG-vv-2PO">
+                                <rect key="frame" x="20" y="202" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRj-h0-8TC">
+                                <rect key="frame" x="20" y="253" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2Jb-MH-Qty">
+                                <rect key="frame" x="20" y="333" width="335" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="jdD-tx-H8v"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Jb-MH-Qty" firstAttribute="top" secondItem="hRj-h0-8TC" secondAttribute="bottom" constant="59" id="7bB-CP-nhJ"/>
+                            <constraint firstItem="CT2-JR-HqA" firstAttribute="leading" secondItem="9wA-zV-H3m" secondAttribute="leading" constant="20" id="APk-Qq-ssE"/>
+                            <constraint firstItem="hRj-h0-8TC" firstAttribute="leading" secondItem="9wA-zV-H3m" secondAttribute="leading" constant="20" id="Dli-14-aQv"/>
+                            <constraint firstItem="N68-Os-bC6" firstAttribute="leading" secondItem="9wA-zV-H3m" secondAttribute="leading" constant="20" id="I0f-CU-kU7"/>
+                            <constraint firstItem="hRj-h0-8TC" firstAttribute="top" secondItem="SyG-vv-2PO" secondAttribute="bottom" constant="30" id="I18-lI-3bg"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hRj-h0-8TC" secondAttribute="trailing" symbolic="YES" id="JQU-FH-gk9"/>
+                            <constraint firstItem="SyG-vv-2PO" firstAttribute="leading" secondItem="9wA-zV-H3m" secondAttribute="leading" constant="20" id="Wbz-ug-a3L"/>
+                            <constraint firstItem="CT2-JR-HqA" firstAttribute="top" secondItem="LXF-Ce-jHb" secondAttribute="bottom" constant="80" id="Zik-ov-3RX"/>
+                            <constraint firstItem="2Jb-MH-Qty" firstAttribute="leading" secondItem="9wA-zV-H3m" secondAttribute="leading" constant="20" id="by3-9c-8jk"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CT2-JR-HqA" secondAttribute="trailing" constant="20" symbolic="YES" id="cKa-oV-Sd2"/>
+                            <constraint firstItem="N68-Os-bC6" firstAttribute="top" secondItem="CT2-JR-HqA" secondAttribute="bottom" constant="30" id="e34-xW-KdA"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SyG-vv-2PO" secondAttribute="trailing" constant="20" symbolic="YES" id="f9k-QE-zs8"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="N68-Os-bC6" secondAttribute="trailing" constant="20" symbolic="YES" id="hRf-dw-OWg"/>
+                            <constraint firstAttribute="trailing" secondItem="2Jb-MH-Qty" secondAttribute="trailing" constant="20" id="lY4-Ni-pbp"/>
+                            <constraint firstItem="SyG-vv-2PO" firstAttribute="top" secondItem="N68-Os-bC6" secondAttribute="bottom" constant="30" id="uHM-KX-eRS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="N68-Os-bC6" id="xfs-fF-WeS"/>
+                        <outlet property="descriptionLabel" destination="hRj-h0-8TC" id="FFC-ZF-cUj"/>
+                        <outlet property="mapView" destination="2Jb-MH-Qty" id="1Vu-Vn-tCP"/>
+                        <outlet property="placeLabel" destination="SyG-vv-2PO" id="jBU-vD-Ber"/>
+                        <outlet property="titleLabel" destination="CT2-JR-HqA" id="AhZ-S6-QjZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jmb-eY-tuO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="471" y="146"/>
+        </scene>
     </scenes>
 </document>
