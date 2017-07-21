@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A70858C41F21A29F00243437 /* InputViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70858C31F21A29F00243437 /* InputViewControllerTests.swift */; };
+		A70858C61F21A2FF00243437 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70858C51F21A2FF00243437 /* InputViewController.swift */; };
 		A7430A6F1F18650B00BAD9AA /* ItemListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7430A6E1F18650B00BAD9AA /* ItemListDataProvider.swift */; };
 		A7430A711F18695800BAD9AA /* ItemListDataProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7430A701F18695800BAD9AA /* ItemListDataProviderTest.swift */; };
 		A755820B1F1320AD004B2DBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A755820A1F1320AD004B2DBB /* AppDelegate.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A70858C31F21A29F00243437 /* InputViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewControllerTests.swift; sourceTree = "<group>"; };
+		A70858C51F21A2FF00243437 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		A7430A6E1F18650B00BAD9AA /* ItemListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataProvider.swift; sourceTree = "<group>"; };
 		A7430A701F18695800BAD9AA /* ItemListDataProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataProviderTest.swift; sourceTree = "<group>"; };
 		A75582071F1320AD004B2DBB /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +165,7 @@
 				A7430A701F18695800BAD9AA /* ItemListDataProviderTest.swift */,
 				A7912BF71F1EFC870084EC53 /* ItemCellTests.swift */,
 				A79A3E051F204CEE00F90056 /* DetailViewControllerTests.swift */,
+				A70858C31F21A29F00243437 /* InputViewControllerTests.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 				A7430A6E1F18650B00BAD9AA /* ItemListDataProvider.swift */,
 				A7CA994C1F1C575700D0E254 /* ItemCell.swift */,
 				A79A3E071F204D8B00F90056 /* DetailViewController.swift */,
+				A70858C51F21A2FF00243437 /* InputViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70858C61F21A2FF00243437 /* InputViewController.swift in Sources */,
 				A7BDB3861F1487FC0048F0E6 /* ItemManager.swift in Sources */,
 				A7430A6F1F18650B00BAD9AA /* ItemListDataProvider.swift in Sources */,
 				A755820B1F1320AD004B2DBB /* AppDelegate.swift in Sources */,
@@ -300,6 +307,7 @@
 				A7912BF81F1EFC870084EC53 /* ItemCellTests.swift in Sources */,
 				A7430A711F18695800BAD9AA /* ItemListDataProviderTest.swift in Sources */,
 				A7BDB3841F1487650048F0E6 /* ItemManagerTests.swift in Sources */,
+				A70858C41F21A29F00243437 /* InputViewControllerTests.swift in Sources */,
 				A7BDB3821F14836B0048F0E6 /* LocationTests.swift in Sources */,
 				A79A3E061F204CEE00F90056 /* DetailViewControllerTests.swift in Sources */,
 				A7B127DA1F1721AB00148BCF /* ItemListViewControllerTest.swift in Sources */,
