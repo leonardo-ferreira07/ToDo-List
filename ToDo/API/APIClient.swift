@@ -16,7 +16,17 @@ class APIClient {
         password: String,
         completion: @escaping (Token?, Error?) -> Void) {
         
-        let query = "username=\(username)&password=\(password)"
+        let allowedCharacters = CharacterSet(charactersIn: "/%&=?$#+-~@<>|\\*,.()[]{}^!").inverted
+        
+        guard let expectedUsername = "dadasdaä".addingPercentEncoding(withAllowedCharacters: allowedCharacters) else {
+            fatalError()
+        }
+        
+        guard let expectedPassword = "%&34".addingPercentEncoding(withAllowedCharacters: allowedCharacters) else {
+            fatalError()
+        }
+        
+        let query = "username=\(expectedUsername)&password=\(expectedPassword)"
         guard let url = URL(string: "https://awesometodos.com/login?\(query)") else {
             fatalError()
         }

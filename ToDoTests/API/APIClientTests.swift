@@ -39,9 +39,19 @@ class APIClientTests: XCTestCase {
             return
         }
         let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
-        XCTAssertEqual(urlComponents?.host, "awesometodos.com")
-        XCTAssertEqual(urlComponents?.path, "/login")
-        XCTAssertEqual(urlComponents?.query, "username=dadasda&password=1234")
+        
+        let allowedCharacters = CharacterSet(charactersIn: "/%&=?$#+-~@<>|\\*,.()[]{}^!").inverted
+        
+        guard let expectedUsername = "dadasdaä".addingPercentEncoding(withAllowedCharacters: allowedCharacters) else {
+            fatalError()
+        }
+        
+        guard let expectedPassword = "%&34".addingPercentEncoding(withAllowedCharacters: allowedCharacters) else {
+            fatalError()
+        }
+        
+        XCTAssertEqual(urlComponents?.percentEncodedQuery, "username=\(expectedUsername)&password=\(expectedPassword)")
+        
     }
     
 }
