@@ -32,8 +32,30 @@ class APIClient {
         }
         
         session.dataTask(with: url) { (data, response, error) in
-            
-        }
+            do {
+                guard error == nil else {
+                    completion(nil, WebserviceError.ResponseError)
+                    return
+                }
+                
+                guard let data = data else {
+                    completion(nil, WebserviceError.DataEmptyError)
+                    return
+                }
+                let dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: String]
+                
+                let token: Token?
+                if let tokenString = dict?["token"] {
+                    token = Token(id: tokenString)
+                } else {
+                    token = nil
+                }
+                
+                completion(token, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }.resume()
         
     }
     
@@ -45,3 +67,8 @@ protocol SessionProtocol {
 }
 
 extension URLSession: SessionProtocol {}
+
+enum WebserviceError: Error {
+    case DataEmptyError
+    case ResponseError
+}
