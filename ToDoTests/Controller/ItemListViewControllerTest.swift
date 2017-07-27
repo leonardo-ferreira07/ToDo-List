@@ -51,20 +51,7 @@ class ItemListViewControllerTest: XCTestCase {
     
     func test_AddItem_PresentsAddItemViewController() {
         
-        XCTAssertNil(sut.presentedViewController)
-        
-        guard let addButton = sut.navigationItem.rightBarButtonItem else {
-            XCTFail()
-            return
-        }
-        guard let action = addButton.action else {
-            XCTFail()
-            return
-        }
-        
-        UIApplication.shared.keyWindow?.rootViewController = sut
-        
-        sut.performSelector(onMainThread: action, with: addButton, waitUntilDone: true)
+        configSelector()
         
         XCTAssertNotNil(sut.presentedViewController)
         XCTAssertTrue(sut.presentedViewController is InputViewController)
@@ -75,17 +62,8 @@ class ItemListViewControllerTest: XCTestCase {
     }
     
     func test_ItemListVC_SharesItemManagerWithInputVC() {
-        guard let addButton = sut.navigationItem.rightBarButtonItem else {
-            XCTFail()
-            return
-        }
-        guard let action = addButton.action else {
-            XCTFail()
-            return
-        }
-        UIApplication.shared.keyWindow?.rootViewController = sut
         
-        sut.performSelector(onMainThread: action, with: addButton, waitUntilDone: true)
+        configSelector()
         
         guard let inputViewController = sut.presentedViewController as? InputViewController else {
             XCTFail()
@@ -97,6 +75,20 @@ class ItemListViewControllerTest: XCTestCase {
         }
         
         XCTAssertTrue(sut.itemManager === inputItemManager)
+    }
+    
+    func configSelector() {
+        guard let addButton = sut.navigationItem.rightBarButtonItem else {
+            XCTFail()
+            return
+        }
+        guard let action = addButton.action else {
+            XCTFail()
+            return
+        }
+        UIApplication.shared.keyWindow?.rootViewController = sut
+        
+        sut.performSelector(onMainThread: action, with: addButton, waitUntilDone: true)
     }
     
 }
