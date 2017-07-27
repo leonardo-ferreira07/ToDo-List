@@ -8,13 +8,14 @@
 
 import Foundation
 
-struct ItemManager {
+class ItemManager {
+    
     var toDoCount: Int { return toDoItems.count }
     var doneCount: Int { return doneItems.count }
     private var toDoItems: [ToDoItem] = []
     private var doneItems: [ToDoItem] = []
     
-    mutating func add(_ item: ToDoItem) {
+    func add(_ item: ToDoItem) {
         if !toDoItems.contains(item) {
             toDoItems.append(item)
         }
@@ -24,12 +25,12 @@ struct ItemManager {
         return toDoItems[index]
     }
     
-    mutating func checkItem(at index: Int) {
+    func checkItem(at index: Int) {
         let item = toDoItems.remove(at: index)
         doneItems.append(item)
     }
     
-    mutating func uncheckItem(at index: Int) {
+    func uncheckItem(at index: Int) {
         let item = doneItems.remove(at: index)
         toDoItems.append(item)
     }
@@ -38,7 +39,7 @@ struct ItemManager {
         return doneItems[index]
     }
     
-    mutating func removeAll() {
+    func removeAll() {
         toDoItems.removeAll()
         doneItems.removeAll()
     }
