@@ -21,11 +21,15 @@ class DetailViewControllerTests: XCTestCase {
         sut = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         
         _ = sut.view
+        
+        sut.itemInfo?.0.removeAll()
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        
+        sut.itemInfo?.0.removeAll()
     }
     
     func test_HasTitleLabel() {
