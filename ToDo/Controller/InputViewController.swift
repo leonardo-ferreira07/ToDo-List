@@ -42,12 +42,16 @@ class InputViewController: UIViewController {
         if let locationName = locationTextField.text, locationName.characters.count > 0 {
             if let address = addressTextField.text, address.characters.count > 0 {
                 
-                geocoder.geocodeAddressString(address, completionHandler: { (placeMarks, error) in
+                geocoder.geocodeAddressString(address, completionHandler: { [unowned self](placeMarks, error) in
                     let placeMark = placeMarks?.first
                     
                     let item = ToDoItem(title: titleString, itemDescription: descriptionString, timestamp: date?.timeIntervalSince1970, location: Location(name: locationName, coordinate: placeMark?.location?.coordinate))
                     
-                    self.itemManager?.add(item)
+                    DispatchQueue.main.async {
+                        self.itemManager?.add(item)
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                    
                     
                 })
                 
@@ -56,9 +60,10 @@ class InputViewController: UIViewController {
         } else {
             let item = ToDoItem(title: titleString, itemDescription: descriptionString, timestamp: date?.timeIntervalSince1970, location: nil)
             self.itemManager?.add(item)
+            dismiss(animated: true, completion: nil)
         }
         
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
     }
     
 }
